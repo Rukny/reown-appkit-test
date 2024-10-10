@@ -93,7 +93,7 @@ export const wagmiAdapter = new WagmiAdapter({
 });
 export const config = wagmiAdapter.wagmiConfig;
 
-const modal = createAppKit({
+createAppKit({
   adapters: [wagmiAdapter],
   projectId: projectId,
   networks: [skaleEuropa],
