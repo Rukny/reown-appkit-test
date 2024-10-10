@@ -74,10 +74,10 @@ const siweConfig = createSIWEConfig({
 });
 
 const metadata = {
-  name: "Skale Swell",
-  description: "Skale Swell",
-  url: "https://swell.skale.space/",
-  icons: ["https://swell.skale.space/favicon.ico"],
+  name: "Reown test",
+  description: "Reown Test ",
+  url: "https://google.com",
+  icons: ["https://www.google.com/favicon.ico"],
 };
 
 // Create wagmiConfig
