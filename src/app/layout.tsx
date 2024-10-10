@@ -25,15 +25,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookies = headers().get('cookie')
+  const cookies = headers().get("cookie");
 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <Providers cookies={cookies}>
-
-        {children}
-        </Providers>
+        <Providers cookies={cookies}>{children}</Providers>
       </body>
     </html>
   );
