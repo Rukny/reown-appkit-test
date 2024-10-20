@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 import { disconnect } from 'wagmi/actions';
 import { config } from '../providers';
 import { signOut } from 'next-auth/react';
