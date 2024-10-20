@@ -1,7 +1,15 @@
 import React from 'react'
+import { disconnect } from 'wagmi/actions';
+import { config } from '../providers';
+import { signOut } from 'next-auth/react';
 
 export default function ProtectedPage() {
   return (
-    <div>Protected Page</div>
+    <button                 onClick={async () => {
+        await disconnect(config);
+        signOut();
+      }}
+    >
+      LOG OUT</button >
   )
 }

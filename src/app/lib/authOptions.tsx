@@ -8,6 +8,7 @@ import {
   getChainIdFromMessage,
   getAddressFromMessage,
 } from "@reown/appkit-siwe";
+import { redirect } from "next/navigation";
 const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
@@ -96,11 +97,11 @@ const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  // events: {
-  //   async signOut() {
-  //     await disconnect(config);
-  //   },
-  // },
+  events: {
+    async signOut() {
+      redirect("/")
+    },
+  },
 };
 
 export default authOptions;

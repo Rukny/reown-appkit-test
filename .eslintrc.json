@@ -1,5 +1,4 @@
 {
-  "plugins": ["prettier"],
   "extends": ["next/core-web-vitals", "next", "eslint:recommended"],
   "rules": {
     "no-unused-vars": "warn" // or "@typescript-eslint/no-unused-vars": "off"
