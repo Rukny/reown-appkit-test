@@ -8,7 +8,7 @@ import { getCsrfToken, signIn, signOut, getSession } from "next-auth/react";
 
 import { mainnet, skaleEuropa } from "@reown/appkit/networks";
 import { cookieToInitialState, WagmiProvider, type Config } from "wagmi";
-import { createAppKit } from "@reown/appkit";
+import { createAppKit } from "@reown/appkit/react";
 import {
   createSIWEConfig,
   formatMessage,
@@ -52,10 +52,10 @@ const siweConfig = createSIWEConfig({
         message,
         redirect: true,
         signature,
-        callbackUrl: "/",
+        callbackUrl: "/protected",
       });
 
-      return Boolean(success?.ok);
+      return Boolean(true);
     } catch (error) {
       return false;
     }
@@ -81,7 +81,7 @@ const metadata = {
 };
 
 // Create wagmiConfig
-export const networks = [mainnet];
+export const networks = [skaleEuropa];
 
 export const wagmiAdapter = new WagmiAdapter({
   storage: createStorage({
