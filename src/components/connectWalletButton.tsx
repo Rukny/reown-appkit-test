@@ -12,7 +12,7 @@ export default function ConnectWalletButton() {
         className="btn btn-app-dark d-flex align-items-center shadow btn-lg border-white rounded-0 w-20 app-text"
         style={{ minHeight: 58 }}
       >
-        <Image
+        {/* <Image
           src="/images/wallet-logo.svg"
           height={30}
           width={30}
@@ -20,7 +20,7 @@ export default function ConnectWalletButton() {
           className="mr-3"
           quality={100}
           style={{ marginRight: "10px" }}
-        />
+        /> */}
         <span className="app-text" style={{ fontWeight: 400 }}>
           Connect Wallet
         </span>
