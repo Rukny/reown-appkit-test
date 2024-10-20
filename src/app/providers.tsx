@@ -52,7 +52,7 @@ const siweConfig = createSIWEConfig({
         message,
         redirect: true,
         signature,
-        callbackUrl: "/protected",
+        callbackUrl: "/",
       });
 
       return Boolean(true);
@@ -75,7 +75,7 @@ const siweConfig = createSIWEConfig({
 
 const metadata = {
   name: "Reown test",
-  description: "Reown Test ",
+  description: "Reown Test ", 
   url: "https://reown-appkit-test.vercel.app/",
   icons: ["https://reown-appkit-test.vercel.app/favicon.ico"],
 };
